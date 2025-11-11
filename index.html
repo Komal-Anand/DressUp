@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dress Up - Women's Fashion Store</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="https://img.icons8.com/color/96/000000/dress-front-view.png">
+  <script src="https://kit.fontawesome.com/7c2e1e2e2a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="logo.png" alt="Dress Up Logo" class="site-logo">
+      <h1>Dress Up</h1>
+    </div>
+    <nav>
+      <a href="#categories">Shop</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <video class="hero-bg-video" src="vid3.mp4" autoplay loop muted playsinline></video>
+    <div class="hero-content">
+      <h2>Discover Your Style</h2>
+      <p>Trendy Clothes, Accessories, and Shoes for Every Woman. Shop the latest collections and express your unique style with Komal Fashion!</p>
+      <button class="cta">Shop Now</button>
+    </div>
+  </section>
+
+  <div class="hero-nav-btns-wrapper">
+    <div class="hero-nav-btns">
+      <button onclick="document.getElementById('clothes-section').scrollIntoView({behavior:'smooth'})" class="hero-nav-btn clothes-btn"><i class="fas fa-tshirt"></i> Clothes</button>
+      <button onclick="document.getElementById('accessories-section').scrollIntoView({behavior:'smooth'})" class="hero-nav-btn accessories-btn"><i class="fas fa-gem"></i> Accessories</button>
+      <button onclick="document.getElementById('shoes-section').scrollIntoView({behavior:'smooth'})" class="hero-nav-btn shoes-btn"><i class="fas fa-shoe-prints"></i> Shoes</button>
+    </div>
+  </div>
+
+  <section id="clothes-section" class="category-full">
+    <video src="vid2.mp4" controls loop autoplay muted poster="https://img.icons8.com/color/96/000000/dress-front-view.png" class="category-full-video"></video>
+    <div class="category-full-title">Clothes</div>
+    <div class="item-slider" id="clothes-slider">
+      <button class="slider-arrow left" onclick="slideItems('clothes', -1)"><i class="fas fa-chevron-left"></i></button>
+      <div class="slider-items">
+        <div class="slider-item" data-index="0">
+          <img src="pic1.jpg" alt="Shirt">
+          <div class="item-name">Balloon Shirt</div>
+          <div class="item-price">₹799</div>
+        </div>
+        <div class="slider-item" data-index="1">
+          <img src="pic2.jpg" alt="Top">
+          <div class="item-name">Denim Shirt</div>
+          <div class="item-price">₹599</div>
+        </div>
+        <div class="slider-item" data-index="2">
+          <img src="pic3.jpg" alt="Pants">
+          <div class="item-name">Baggy Mid-Waist</div>
+          <div class="item-price">₹999</div>
+        </div>
+        <div class="slider-item" data-index="3">
+          <img src="pic4.jpg" alt="Dress">
+          <div class="item-name">Lather Bomber Jacket</div>
+          <div class="item-price">₹1299</div>
+        </div>
+        <div class="slider-item" data-index="4">
+          <img src="pic5.jpg" alt="Ethnic Wear">
+          <div class="item-name">Floral Dress</div>
+          <div class="item-price">₹1499</div>
+        </div>
+      </div>
+      <button class="slider-arrow right" onclick="slideItems('clothes', 1)"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <section id="accessories-section" class="category-full">
+    <video src="vid1.mp4" controls loop autoplay muted poster="https://img.icons8.com/color/96/000000/necklace.png" class="category-full-video"></video>
+    <div class="category-full-title">Accessories</div>
+    <div class="item-slider" id="accessories-slider">
+      <button class="slider-arrow left" onclick="slideItems('accessories', -1)"><i class="fas fa-chevron-left"></i></button>
+      <div class="slider-items">
+        <div class="slider-item" data-index="0">
+          <img src="pic6.jpg" alt="Ring">
+          <div class="item-name">Ring</div>
+          <div class="item-price">₹299</div>
+        </div>
+        <div class="slider-item" data-index="1">
+          <img src="pic7.jpg" alt="Bangle">
+          <div class="item-name">Snake Earings</div>
+          <div class="item-price">₹399</div>
+        </div>
+        <div class="slider-item" data-index="2">
+          <img src="pic8.jpg" alt="Necklace">
+          <div class="item-name">Snackskin Bracelets</div>
+          <div class="item-price">₹899</div>
+        </div>
+        <div class="slider-item" data-index="3">
+          <img src="pic9.jpg" alt="Bag">
+          <div class="item-name">Charm Necklace</div>
+          <div class="item-price">₹1199</div>
+        </div>
+        <div class="slider-item" data-index="4">
+          <img src="pic10.jpg" alt="Sunglasses">
+          <div class="item-name">Leather Gloves</div>
+          <div class="item-price">₹499</div>
+        </div>
+      </div>
+      <button class="slider-arrow right" onclick="slideItems('accessories', 1)"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <section id="shoes-section" class="category-full">
+    <video src="vid4.mp4" controls loop autoplay muted poster="https://img.icons8.com/color/96/000000/high-heeled-shoe.png" class="category-full-video"></video>
+    <div class="category-full-title">Shoes & Heels</div>
+    <div class="item-slider" id="shoes-slider">
+      <button class="slider-arrow left" onclick="slideItems('shoes', -1)"><i class="fas fa-chevron-left"></i></button>
+      <div class="slider-items">
+        <div class="slider-item" data-index="0">
+          <img src="pic11.jpg" alt="Sneakers">
+          <div class="item-name">Ankle Boots</div>
+          <div class="item-price">₹999</div>
+        </div>
+        <div class="slider-item" data-index="1">
+          <img src="pic12.jpg" alt="Heels">
+          <div class="item-name">Faux-Patent Heel</div>
+          <div class="item-price">₹1299</div>
+        </div>
+        <div class="slider-item" data-index="2">
+          <img src="pic13.jpg" alt="Flats">
+          <div class="item-name">Sandal</div>
+          <div class="item-price">₹799</div>
+        </div>
+        <div class="slider-item" data-index="3">
+          <img src="pic14.jpg" alt="Boots">
+          <div class="item-name">Running Trainers</div>
+          <div class="item-price">₹1499</div>
+        </div>
+        <div class="slider-item" data-index="4">
+          <img src="pic15.jpg" alt="Casual Shoes">
+          <div class="item-name">Denim Buckle</div>
+          <div class="item-price">₹699</div>
+        </div>
+      </div>
+      <button class="slider-arrow right" onclick="slideItems('shoes', 1)"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <h2>Why Shop With Us?</h2>
+    <div class="features-list">
+      <div class="feature-item">
+        <img class="feature-img" src="del.jpg" alt="Fast Delivery">
+        <i class="fas fa-shipping-fast"></i>
+        <h4>Fast Delivery</h4>
+        <p>Get your orders delivered quickly and safely.</p>
+      </div>
+      <div class="feature-item">
+        <img class="feature-img" src="ret.jpg" alt="Easy Returns">
+        <i class="fas fa-undo-alt"></i>
+        <h4>Easy Returns</h4>
+        <p>Hassle-free returns and exchanges for your peace of mind.</p>
+      </div>
+      <div class="feature-item">
+        <img class="feature-img" src="sec.jpg" alt="Secure Payments">
+        <i class="fas fa-lock"></i>
+        <h4>Secure Payments</h4>
+        <p>100% secure payment options for worry-free shopping.</p>
+      </div>
+      <div class="feature-item">
+        <img class="feature-img" src="qua.png" alt="Top Quality">
+        <i class="fas fa-star"></i>
+        <h4>Top Quality</h4>
+        <p>Handpicked, premium quality products only.</p>
+      </div>
+      <div class="feature-item">
+        <img class="feature-img" src="24.jpg" alt="24/7 Support">
+        <i class="fas fa-headset"></i>
+        <h4>24/7 Support</h4>
+        <p>Friendly customer support always ready to help you.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Contact us: <a href="anandkomal004@gmail.com" style="color:#e0b0ff;">anandkomal004@gmail.com</a></p>
+    <div class="contact-options" style="display:flex; gap:0.6rem; justify-content:center; margin:1.2rem 0;">
+      <a href="https://www.linkedin.com/in/komal-anand-153630283/" target="_blank" class="contact-icon linkedin" title="LinkedIn"
+         style="background:#0077b5; width:54px; height:54px; display:flex; align-items:center; justify-content:center; border-radius:10px;">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"
+             style="width:32px; height:32px; filter:invert(1) brightness(2);"/>
+      </a>
+      <a href="https://www.instagram.com/_komal_anand.02/" target="_blank" class="contact-icon instagram" title="Instagram"
+         style="background:radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); width:54px; height:54px; display:flex; align-items:center; justify-content:center; border-radius:10px;">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"
+             style="width:32px; height:32px; filter:invert(1) brightness(2);"/>
+      </a>
+      <a href=" " target="_blank" class="contact-icon facebook" title="Facebook"
+         style="background:#1877f3; width:54px; height:54px; display:flex; align-items:center; justify-content:center; border-radius:10px;">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"
+             style="width:32px; height:32px; filter:invert(1) brightness(2);"/>
+      </a>
+    </div>
+    <p>&copy; 2025 Dress Up. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
